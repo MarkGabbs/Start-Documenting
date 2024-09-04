@@ -5,7 +5,7 @@ Function Start-Documenting {
         [string] $StartDateTime
     )
 
-    $StartDateTime = get-date -format yyyy-MM-dd-hhmm
+    $StartDateTime = get-date -format yyyy-MM-dd-HHmm
 
 	if($IsWindows -eq "True"){
 		$PathToFile="$env:USERPROFILE\Documents\WEI-$StartDateTime.txt"
