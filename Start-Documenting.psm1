@@ -8,8 +8,6 @@ Place the Start-Docuemnting.psm1 file into:
 ~/Doccuments/PowerShell/Modules/Start-Dcoumenting/Start-Documenting.psm1
 or
 C:\Users%USERNAME%\Doccuments\PowerShell\Modules\Start-Dcoumenting\Start-Documenting.psm1
-
-
 #>
 
 Function Start-Documenting {
@@ -34,4 +32,3 @@ Function Start-Documenting {
 
     Start-Transcript $PathToFile -NoClobber
 }
-
