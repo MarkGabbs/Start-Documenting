@@ -22,11 +22,11 @@ Function Start-Documenting {
     $StartDateTime = get-date -format yyyy-MM-dd-HHmm
 
 	if($IsWindows -eq "True"){
-		$PathToFile="$env:USERPROFILE\Documents\WEI-$StartDateTime.txt"
+		$PathToFile="$env:USERPROFILE\Documents\Gabbs-$StartDateTime.txt"
 	} elseif($IsMacOS -eq "True"){
-		$PathToFile="~/Documents/WEI-$StartDateTime.txt"
+		$PathToFile="~/Documents/Gabbs-$StartDateTime.txt"
 	} elseif($IsLinux -eq "True"){
-		$PathToFile="~/Documents/WEI-$StartDateTime.txt"
+		$PathToFile="~/Documents/Gabbs-$StartDateTime.txt"
 	} else {
 	   write-host("This script has no idea what OS you are using")
 	   $host.exit
@@ -34,3 +34,4 @@ Function Start-Documenting {
 
     Start-Transcript $PathToFile -NoClobber
 }
+
