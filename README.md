@@ -1,8 +1,24 @@
 # Start-Documentation
-A simple module, to run "Start-Transcript" with a consistent file & path name.
-Has qualifier to check which OS, and use your home directories 'Documents' folder to keep PowerShell transcripts.
 
-Place the Start-Documentation.psm1 file into:
-~/Documents/PowerShell/Modules/Start-Documentation/Start-Documentation.psm1
-or
-C:\Users\%USERNAME%\Documents\PowerShell\Modules\Start-Documentation\Start-Documentation.psm1
+A simple cross-platform PowerShell module that starts a transcript with a consistent, timestamped filename in the user's Documents folder.
+
+## Features
+
+- Works on Windows, macOS, and Linux
+- Creates a transcript named `Gabbs-yyyy-MM-dd-HHmm.txt` (or a custom prefix)
+- Uses the platform-native Documents folder by default
+- Supports a custom path
+- Uses `-NoClobber` so it will never overwrite an existing transcript
+- Full comment-based help (`Get-Help Start-Documentation`)
+
+## Installation
+
+### Manual installation
+
+1. Create the module folder:
+   ```powershell
+   # Windows
+   New-Item -ItemType Directory -Path "$env:USERPROFILE\Documents\PowerShell\Modules\Start-Documentation" -Force
+
+   # macOS / Linux
+   New-Item -ItemType Directory -Path "$HOME/Documents/PowerShell/Modules/Start-Documentation" -Force
